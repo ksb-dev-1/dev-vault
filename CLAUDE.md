@@ -38,7 +38,8 @@ The developer is learning and must be able to explain every line in an interview
 Auth tables (Better Auth, do not edit by hand): user, session, account, verification.
 App tables:
 
-- `item`: type (snippet, command, prompt, note, link), title, content, language, url, is_favorite, is_pinned, is_public
+- `item`: type (snippet, command, prompt, note, link, file, image), title, description, content, language, url, file_url, file_public_id, file_name, file_size, is_favorite, is_pinned, is_public
+  - links use `url`; files and images use the `file_*` columns (the file itself lives in Cloudinary)
 - `collection`: name, description, is_favorite
 - `item_collection`: join table (item <-> collection, many-to-many)
 - `tag` and `item_tag`: tags per user, join table to items
@@ -54,7 +55,7 @@ All app tables have `user_id` with `ON DELETE CASCADE`, except join tables and `
 3. **Validate all input with Zod** on the server.
 4. **Authorize on the server, always.** Every query and mutation must check the logged-in user owns the data. Hiding a button in the UI is not security.
 5. **Join tables have no `user_id`.** Before inserting into `item_collection` or `item_tag`, check that both rows belong to the current user.
-6. **Plan limits** are checked on the server using `PLAN_LIMITS`. Pro = a `subscription` row with `status = 'active'`.
+6. **Plan limits** are checked on the server using `PLAN_LIMITS`. Pro = a `subscription` row with `status = 'active'`. File and image items are Pro only. When a file item is deleted, also delete it from Cloudinary using `file_public_id`.
 7. **Editing an item = one transaction:** save the old values to `item_version`, then update `item`. Both succeed or both fail (`db.transaction`).
 8. **Tests before implementation** for business logic (limits, ownership checks, version history).
 9. **Small commits**, one feature per commit, conventional messages (`feat(...)`, `fix(...)`).

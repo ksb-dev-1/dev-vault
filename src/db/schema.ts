@@ -2,6 +2,7 @@ import { relations } from "drizzle-orm";
 import {
   boolean,
   index,
+  integer,
   pgEnum,
   pgTable,
   primaryKey,
@@ -88,6 +89,8 @@ export const itemType = pgEnum("item_type", [
   "prompt",
   "note",
   "link",
+  "file",
+  "image",
 ]);
 
 export const item = pgTable(
@@ -101,9 +104,14 @@ export const item = pgTable(
       .references(() => user.id, { onDelete: "cascade" }),
     type: itemType("type").notNull(),
     title: text("title").notNull(),
+    description: text("description"),
     content: text("content"),
     language: text("language"),
     url: text("url"),
+    fileUrl: text("file_url"),
+    filePublicId: text("file_public_id"),
+    fileName: text("file_name"),
+    fileSize: integer("file_size"),
     isFavorite: boolean("is_favorite").default(false).notNull(),
     isPinned: boolean("is_pinned").default(false).notNull(),
     isPublic: boolean("is_public").default(false).notNull(),

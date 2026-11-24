@@ -14,7 +14,7 @@ Individual developers and students who want a fast, personal knowledge base. Sin
 
 ## Item types
 
-Snippet, Command, Prompt, Note, Link.
+Snippet, Command, Prompt, Note, Link (all plans). File and Image (Pro only, stored in Cloudinary).
 
 ## Features
 
@@ -28,13 +28,13 @@ Snippet, Command, Prompt, Note, Link.
 - Search and filter (by type, tag, collection)
 - Syntax highlighting and a code editor for snippets and commands
 - Free and Pro plans with Stripe
+- File and image items with Cloudinary uploads (Pro only)
 
 ### Standout
 
 - **Version history:** every edit saves the old version; view past versions, compare, restore
 - **Public share link** for an item (read-only, revocable)
 - **AI helpers (Gemini free models):** auto-suggest tags, explain a snippet
-- File/image attachments (Cloudinary)
 
 ### Last
 
@@ -43,11 +43,12 @@ Snippet, Command, Prompt, Note, Link.
 
 ## Plans
 
-|                                  | Free                          | Pro       |
-| -------------------------------- | ----------------------------- | --------- |
-| Items                            | 5                             | Unlimited |
-| Collections                      | 1                             | Unlimited |
-| Version history, AI, attachments | Pro only (decide per feature) | Included  |
+|                      | Free                          | Pro       |
+| -------------------- | ----------------------------- | --------- |
+| Items                | 5                             | Unlimited |
+| Collections          | 1                             | Unlimited |
+| File and image items | Not available                 | Included  |
+| Version history, AI  | Pro only (decide per feature) | Included  |
 
 The Free limits of 5 items and 1 collection are for **testing**. Before deploying, change them in `src/lib/plans.ts` (planned: 50 items, 3 collections).
 

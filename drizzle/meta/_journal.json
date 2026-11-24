@@ -71,6 +71,20 @@
       "when": 1794471206700,
       "tag": "0009_supreme_sasquatch",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1795499213747,
+      "tag": "0010_warm_magneto",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1795503635849,
+      "tag": "0011_dashing_king_cobra",
+      "breakpoints": true
     }
   ]
 }
