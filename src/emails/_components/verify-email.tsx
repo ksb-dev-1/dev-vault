@@ -20,13 +20,13 @@ export default function VerifyEmail({ url, name = "there" }: VerifyEmailProps) {
   return (
     <Html lang="en">
       <Head />
-      <Preview>Verify your CodeCache account</Preview>
+      <Preview>Verify your DevVault account</Preview>
 
       <Body style={main}>
         <Container style={container}>
           <Section style={card}>
             {/* Brand Header */}
-            <Text style={brand}>CodeCache</Text>
+            <Text style={brand}>DevVault</Text>
 
             <Heading style={heading}>Verify your email</Heading>
 
@@ -35,7 +35,7 @@ export default function VerifyEmail({ url, name = "there" }: VerifyEmailProps) {
             </Text>
 
             <Text style={text}>
-              Welcome to <strong>CodeCache</strong> 👋 Please confirm your email
+              Welcome to <strong>DevVault</strong> 👋 Please confirm your email
               address to activate your account and start exploring.
             </Text>
 
@@ -51,7 +51,7 @@ export default function VerifyEmail({ url, name = "there" }: VerifyEmailProps) {
             </Text>
 
             <Text style={muted}>
-              If you didn’t create a CodeCache account, you can safely ignore
+              If you didn’t create a DevVault account, you can safely ignore
               this email.
             </Text>
 
@@ -65,7 +65,7 @@ export default function VerifyEmail({ url, name = "there" }: VerifyEmailProps) {
             <Text style={link}>{url}</Text>
 
             <Text style={copyright}>
-              © {new Date().getFullYear()} CodeCache. All rights reserved.
+              © {new Date().getFullYear()} DevVault. All rights reserved.
             </Text>
           </Section>
         </Container>

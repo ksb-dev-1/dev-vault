@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import { SignInForm } from "./sign-in-form";
 
 export const metadata: Metadata = {
-  title: "Sign In - CodeCache",
-  description: "Sign in to your CodeCache account.",
+  title: "Sign In - DevVault",
+  description: "Sign in to your DevVault account.",
 };
 
 export default function SignInPage() {

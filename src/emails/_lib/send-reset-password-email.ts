@@ -19,7 +19,7 @@ export async function sendResetPasswordEmail({
   await resend.emails.send({
     from,
     to,
-    subject: "Reset CodeCache account password",
+    subject: "Reset your DevVault password",
     react: ForgotPasswordEmail({
       url,
       name,

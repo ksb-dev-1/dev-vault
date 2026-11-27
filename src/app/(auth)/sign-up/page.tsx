@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import { SignUpForm } from "./sign-up-form";
 
 export const metadata: Metadata = {
-  title: "Sign up - CodeCache",
+  title: "Sign up - DevVault",
   description:
-    "Create a CodeCache account to find your next job or hire top talent.",
+    "Create a DevVault account to save your snippets, commands, prompts, notes and links in one place.",
 };
 
 export default function SignUpPage() {

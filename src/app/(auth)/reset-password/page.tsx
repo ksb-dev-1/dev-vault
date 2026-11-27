@@ -9,9 +9,9 @@ import { ROUTES } from "@/lib/navigation-paths";
 import { ResetPasswordForm } from "./reset-password-form";
 
 export const metadata: Metadata = {
-  title: "Reset Password - CodeCache",
+  title: "Reset Password - DevVault",
   description:
-    "Create a new password to securely access your CodeCache account.",
+    "Create a new password to securely access your DevVault account.",
 };
 
 async function GetToken({

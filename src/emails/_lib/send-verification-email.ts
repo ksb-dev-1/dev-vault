@@ -19,7 +19,7 @@ export async function sendEmailVerify({
   await resend.emails.send({
     from,
     to,
-    subject: "Verify your CodeCache account",
+    subject: "Verify your DevVault account",
     react: VerifyEmail({
       url,
       name,
